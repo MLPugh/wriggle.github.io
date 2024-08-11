@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reed, Barrel, Mouthpiece - Clarinet</title>
+
+        <script src="http://unpkg.com/tone@14.7.77/build/Tone.js"></script>
+        <!--Special thanks to https://github.com/cwilso/PitchDetect-->
+    </head>
+    <body>
+        <h1>Reed, Barrel, Mouthpiece - Clarinet</h1>
+        <h2>Instructions</h2>
+        <p>You may press the play sound button to hear the sound that should happen when you play on your reed, barrel, and mouthpiece, 
+            or you may try to play the sound immediately to get feedback. When you click start recording, make sure that the browser has 
+            access to your microphone!</p>
+        <p>You have completed this exercise when the note sounds an F# within 25 cents. Follow the prompts to 
+            learn how to change your sound.</p>
+        <br />
+        <button id="play" onclick="buttonplay()">Play Sound</button>
+        <br />
+        <p><button onclick="startPitchDetect();">Start Recording</button></p>
+
+		<div id="detector" class="vague">
+			<div class="pitch"><span id="pitch">--</span>Hz</div>
+			<div class="note"><span id="note">--</span></div>   
+			<canvas id="output" width=300 height=42></canvas>
+        </div>
+        <p id="good"></p>
+        <script src="Music.js"></script>
+    </body>
+</html>
